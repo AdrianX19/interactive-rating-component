@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: 'Overpass', sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #131518;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 412px;
+  height: 416px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 30px;
+  padding: 32px;
+  margin: 24px;
+}
+
+.star-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #262E38;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.description {
+  margin: 7px 0 24px 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: #969FAD;
+}
+
+.rates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate-box {
+  width: 51px;
+  height: 51px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label,
+input {
+  position: absolute;
+  cursor: pointer;
+}
+
+input {
+  appearance: none;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background-color: #262E38;
+}
+
+label {
+  font-size: 16px;
+  line-height: 24px;
+  color: #7C8798;
+  letter-spacing: .2px;
+  font-weight: 700;
+}
+
+input:hover {
+  background-color: #FC7614;
+}
+
+input:checked {
+  background-color: #7C8798;
+}
+
+input:hover+label,
+input:checked+label {
+  color: white;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  margin-top: 32px;
+  border: none;
+  background: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 25px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: hsl(25, 97%, 53%);
+}
+
+
+/* ---- thank-you modal ---- */
+
+.thank-you {
+  padding: 13px 0;
+  text-align: center;
+}
+
+.given-rate {
+  margin: 32px 0;
+  padding: 6px 20px 2px 20px;
+  display: inline-block;
+  color: #FC7614;
+  background-color: #262E38;
+  font-size: 15px;
+  line-height: 24px;
+  border-radius: 25px;
+}
+
+.thank-you .description {
+  padding: 0 5px;
+}
+
+@media (max-width: 375px) {
+  .modal {
+    min-width: 327px;
+    height: auto;
+    border-radius: 15px;
+    padding: 24px 24px 32px 24px;
+  }
+
+  .star-container {
+    margin-bottom: 16px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .star-container img {
+    width: 14px
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .description {
+    margin: 17px 0 24px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .rate-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  input {
+    width: 42px;
+    height: 42px;
+  }
+
+  button {
+    width: 100%;
+    height: 45px;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+
+  .thank-you {
+    padding: 10px 0 5px 0;
+    text-align: center;
+  }
+
+  .thanks-img-container img {
+    width: 144px;
+  }
+
+  .given-rate {
+    margin: 24px 0;
+    padding: 7px 12px 3px 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .thank-you .description {
+    margin: 10px 0 0 0;
+    padding: 0 5px;
+  }
+}
