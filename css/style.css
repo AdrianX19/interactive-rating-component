@@ -81,6 +81,7 @@ input {
   height: 51px;
   border-radius: 50%;
   background-color: #262E38;
+  transition: .2s;
 }
 
 label {
@@ -119,7 +120,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:disabled {
+  background-color: #AAAAAA;
+  color: black;
+  cursor: initial;
+}
+
+button:enabled:hover {
   background-color: #FFFFFF;
   color: hsl(25, 97%, 53%);
 }
@@ -128,6 +135,7 @@ button:hover {
 /* ---- thank-you modal ---- */
 
 .thank-you {
+  display: none;
   padding: 13px 0;
   text-align: center;
 }
